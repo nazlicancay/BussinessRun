@@ -7,11 +7,12 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    public TextMeshProUGUI dolarCount;
+    public TextMeshProUGUI levelCount;
     public LevelManager levelManager;
     public ScoreManager scoreManager;
     public Button nextlevelbutton;
-
+    public TextMeshProUGUI coinCount;
+    public PlayerCollitions player;
     void Start()
     {
         
@@ -20,6 +21,7 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        coinCount.text = (player.coinNum*10).ToString();
         
     }
 }

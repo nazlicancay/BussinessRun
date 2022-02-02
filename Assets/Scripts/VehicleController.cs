@@ -6,6 +6,7 @@ public class VehicleController : MonoBehaviour
 {
     // Start is called before the first frame update
     public List<GameObject> vehicles = new List<GameObject>();
+    public PlayerCollitions player;
     void Start()
     {
         
@@ -15,5 +16,14 @@ public class VehicleController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void SetVehicleFalse()
+    {
+        if (player.skate)
+        {
+
+        }
+
     }
 }
