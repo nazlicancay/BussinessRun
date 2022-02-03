@@ -26,6 +26,8 @@ public class PlayerCollitions : MonoBehaviour
     public bool skateActive;
     public Vector3 handTarget = new Vector3();
     public bool once = true;
+    public ParticleSystem confeti;
+    public bool popConfeti = true;
     void Start()
     {
         
@@ -75,6 +77,7 @@ public class PlayerCollitions : MonoBehaviour
                 other.gameObject.transform.parent = transform;
                 PlayIK();
             }
+            
            
 
                 }
@@ -186,6 +189,10 @@ public class PlayerCollitions : MonoBehaviour
 
         if (other.gameObject.CompareTag("finish"))
         {
+            if (popConfeti)
+            {
+                confeti.Play();
+            }
             if (cycle.gameObject != null)
             {
                 playerMovement.Fspeed = 0;
