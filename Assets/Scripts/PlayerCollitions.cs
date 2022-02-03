@@ -81,22 +81,22 @@ public class PlayerCollitions : MonoBehaviour
 
         if (other.gameObject.CompareTag("motor"))
         {
-            skateActive = false;
-
-            motor = other.gameObject;
-            if(scoreManager.GameScore >= 100)
             {
-                bicycle.gameObject.SetActive(false);
+                if(scoreManager.GameScore >= 100)
+                {
+                    bicycle.gameObject.SetActive(false);
 
-                Skate(false);
-                playerMovement.AddSpeed(3);
-                gameManager.anim.SetTrigger("tpose");
-                other.gameObject.transform.parent = transform;
-                ık.solver.leftFootEffector.target = leftMotorLegTarget;
-                ık.solver.rightFootEffector.target = rightMotorLegTarget;
-                ık.solver.leftHandEffector.target = leftMotorArmTarget;
-                ık.solver.rightHandEffector.target = rightMotorArmTarget;
-                PlayIK();
+                    Skate(false);
+                    playerMovement.AddSpeed(3);
+                    gameManager.anim.SetTrigger("tpose");
+                    other.gameObject.transform.parent = transform;
+                    ık.solver.leftFootEffector.target = leftMotorLegTarget;
+                    ık.solver.rightFootEffector.target = rightMotorLegTarget;
+                    ık.solver.leftHandEffector.target = leftMotorArmTarget;
+                    ık.solver.rightHandEffector.target = rightMotorArmTarget;
+                    PlayIK();
+
+                }
 
 
             }
@@ -108,6 +108,7 @@ public class PlayerCollitions : MonoBehaviour
 
         if (other.gameObject.CompareTag("skate"))
         {
+
             skateActive = true;
             if(scoreManager.GameScore > 30)
             {
@@ -130,7 +131,7 @@ public class PlayerCollitions : MonoBehaviour
         if (other.gameObject.CompareTag("barrier"))
         {
             
-            if(cycle.gameObject != null && once)
+            if(cycle.gameObject != null)
             {
                 vehicle.SetVehicleFalse(cycle);
                 playerMovement.DelJumpSpeed(0);
@@ -139,14 +140,14 @@ public class PlayerCollitions : MonoBehaviour
 
 
             }
-            if(motor.gameObject != null && once)
+            if(motor.gameObject != null)
             {
                 vehicle.SetVehicleFalse(motor);
                 playerMovement.DelJumpSpeed(2);
                 Debug.Log("motor");
             }
 
-            if(skateActive && once)
+            if(skateActive)
             {
                 skateActive = false;
                 Skate(false);
@@ -154,7 +155,6 @@ public class PlayerCollitions : MonoBehaviour
                 Debug.Log("skate");
             }
 
-            once = false;
         }
 
         if (other.gameObject.CompareTag("man"))
@@ -181,6 +181,38 @@ public class PlayerCollitions : MonoBehaviour
           
 
 
+
+        }
+
+        if (other.gameObject.CompareTag("finish"))
+        {
+            if (cycle.gameObject != null)
+            {
+                playerMovement.Fspeed = 0;
+
+                vehicle.SetVehicleFalseFinish(cycle);
+                gameManager.anim.SetTrigger("dance");
+
+
+
+            }
+            if (motor.gameObject != null)
+            {
+                playerMovement.Fspeed = 0;
+
+                vehicle.SetVehicleFalseFinish(motor);
+                gameManager.anim.SetTrigger("dance");
+            }
+
+            if (skateActive)
+            {
+                playerMovement.Fspeed = 0;
+
+                skateActive = false;
+                Skate(false);
+                gameManager.anim.SetTrigger("dance");
+            }
+            gameManager.GameActive = false;
 
         }
 
@@ -216,6 +248,7 @@ public class PlayerCollitions : MonoBehaviour
     {
         Skateleft.gameObject.SetActive(x);
         SkateRight.gameObject.SetActive(x);
+        gameManager.anim.SetBool("faster", x);
 
     }
 }

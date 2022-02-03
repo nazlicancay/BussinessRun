@@ -14,6 +14,7 @@ TagManager:
   - manHole
   - barrier
   - man
+  - finish
   layers:
   - Default
   - TransparentFX
