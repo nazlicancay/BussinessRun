@@ -88,8 +88,15 @@ void Start()
         Fspeed += speed;
     }
 
+    public void DelJumpSpeed(int speed)
+    {
+        Fspeed -= speed;
+
+        transform.DOMoveZ( transform.position.z + 1.5f , 1f);
+    }
+
     public void DelSpeed(int speed)
     {
-        transform.DOMoveZ( transform.position.z + 1.5f , 1f);
+        Fspeed -= speed;
     }
 }

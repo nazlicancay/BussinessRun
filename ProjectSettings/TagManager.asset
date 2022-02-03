@@ -12,6 +12,8 @@ TagManager:
   - motor
   - skate
   - manHole
+  - barrier
+  - man
   layers:
   - Default
   - TransparentFX
