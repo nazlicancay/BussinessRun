@@ -28,6 +28,7 @@ public class PlayerCollitions : MonoBehaviour
     public bool once = true;
     public ParticleSystem confeti;
     public bool popConfeti = true;
+    public Canvas winCanvas;
     void Start()
     {
         
@@ -46,21 +47,21 @@ public class PlayerCollitions : MonoBehaviour
         if (other.gameObject.CompareTag("addtime"))
         {
             Timebar.addTime = true;
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
 
         }
 
         if (other.gameObject.CompareTag("deltime"))
         {
             Timebar.delTime = true;
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
         }
 
         if (other.gameObject.CompareTag("Coin"))
         {
             coinNum += 1;
             Debug.Log("para");
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
         }
 
         if (other.gameObject.CompareTag("cycle"))
@@ -128,6 +129,7 @@ public class PlayerCollitions : MonoBehaviour
             
             FailCanvas.gameObject.SetActive(true);
             gameManager.GameActive = false;
+            gameManager.anim.SetTrigger("defated");
 
         }
 
@@ -220,6 +222,7 @@ public class PlayerCollitions : MonoBehaviour
                 gameManager.anim.SetTrigger("dance");
             }
             gameManager.GameActive = false;
+            winCanvas.gameObject.SetActive(true);
 
         }
 

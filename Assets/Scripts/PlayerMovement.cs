@@ -33,12 +33,7 @@ void Start()
             once = false;
         }
 
-        if(Swipe)
-        {
-            //gameManager.StartGame();
-        }
-
-        
+    
 
         if (GameManager.Instance.GameActive)
         {
@@ -68,7 +63,6 @@ void Start()
 
     public void InputUpdate(Vector2 delta)
     {
-        Swipe = true;
         if (GameManager.Instance.GameActive)
         {
             

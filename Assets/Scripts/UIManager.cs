@@ -11,6 +11,9 @@ public class UIManager : MonoBehaviour
     public LevelManager levelManager;
     public ScoreManager scoreManager;
     public Button nextlevelbutton;
+    public Button Restartevelbutton;
+    public Canvas RestartCanvas;
+    public Canvas NextLevelCanvas;
     public TextMeshProUGUI coinCount;
     public PlayerCollitions player;
     void Start()

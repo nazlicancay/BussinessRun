@@ -15,6 +15,8 @@ public class VehicleController : MonoBehaviour
     public ScoreManager score;
     public PlayerMovement playerMovement;
     private ParticleSystem ps;
+        public VehicleController vehicle;
+
     void Start()
     {
         
