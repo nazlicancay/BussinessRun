@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: NutRun
+  companyName: Gameograph
+  productName: NazlicanCayBusiness
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -153,7 +153,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    iPhone: com.DefaultCompany.NutRun
+    iPhone: com.Gameograph.NazlicanCayBusiness
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -266,7 +266,14 @@ PlayerSettings:
   AndroidMinifyDebug: 0
   AndroidValidateAppBundleSize: 1
   AndroidAppBundleSizeToValidate: 100
-  m_BuildTargetIcons: []
+  m_BuildTargetIcons:
+  - m_BuildTarget: 
+    m_Icons:
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 011f0b5a02b68409c9feca37953818f9, type: 3}
+      m_Width: 128
+      m_Height: 128
+      m_Kind: 0
   m_BuildTargetPlatformIcons: []
   m_BuildTargetBatching:
   - m_BuildTarget: Standalone
@@ -696,10 +703,10 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: 7af20c8a-47bf-4bd8-8fa6-5b41c22be8a4
+  cloudProjectId: 1d7163c9-eb18-4a95-a612-70b8c3a0e09e
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: UserUnity7_NazLIcanCay_NUT_RUN
+  projectName: "UserUnity7_Nazl\u0131canCay_BUSINESS_RUN"
   organizationId: gameograph-oyun-ve-bili-im-teknolojileri-e-itim
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

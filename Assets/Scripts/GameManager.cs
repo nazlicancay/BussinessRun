@@ -11,6 +11,7 @@ public class GameManager : Singleton<GameManager>
     public GameObject levelObj;
     public GameObject player;
     public Animator anim;
+    public PlayerMovement playerSpeed;
    
   
     // Start is called before the first frame update
@@ -30,17 +31,30 @@ public class GameManager : Singleton<GameManager>
     {
         StartImange.SetActive(false);
         GameActive = true;
-        anim.SetTrigger("walk");
+        anim.SetBool("Walk", true);
+        playerSpeed.Fspeed = 2;
     }
 
     public void StartLevel()
     {
         player.transform.DORotate(new Vector3(0, 0, 180f), 1f);
         GameActive = true;
+        playerSpeed.Fspeed = 2;
+
     }
 
-   
-   
+    public void StartNextLevel()
+    {
+        StartImange.SetActive(false);
+        GameActive = true;
+       
+        playerSpeed.Fspeed = 2;
+
+
+    }
+
+
+
 
 
 }

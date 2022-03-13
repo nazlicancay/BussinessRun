@@ -1,0 +1,156 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9185779907428951843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9185779907428951845}
+  - component: {fileID: 9185779907428951844}
+  - component: {fileID: 9185779907428951849}
+  - component: {fileID: 9185779907428951850}
+  - component: {fileID: 9185779907428951852}
+  - component: {fileID: 9185779907428951846}
+  - component: {fileID: 9185779907428951847}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9185779907428951845
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9185779907428951843}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 562.5, y: 1218, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9185779907428951844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9185779907428951843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e16204ea309604e46bf43ca159a3ad5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameActive: 0
+  GameEnded: 0
+  StartImange: {fileID: 0}
+  levelObj: {fileID: 0}
+  player: {fileID: 0}
+  anim: {fileID: 0}
+  playerSpeed: {fileID: 0}
+--- !u!114 &9185779907428951849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9185779907428951843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e254b15fb7554525900c5b75224dbfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finalCamTarget: {fileID: 0}
+  cm: {fileID: 0}
+--- !u!114 &9185779907428951850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9185779907428951843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ef52cafa600649269503d9199ee4641, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levels:
+  - {fileID: 0}
+  - {fileID: 0}
+  Player: {fileID: 0}
+  target: {fileID: 0}
+  levelCount: 1
+  NextLevel: 0
+  HeartBar: {fileID: 0}
+  level: {fileID: 0}
+  dolar: {fileID: 0}
+  handdolar: {fileID: 0}
+  "u\u0131": {fileID: 9185779907428951852}
+  vehicle: {fileID: 9185779907428951847}
+  player: {fileID: 0}
+  playerMovement: {fileID: 0}
+  bx: {fileID: 0}
+  gameManager: {fileID: 9185779907428951844}
+--- !u!114 &9185779907428951852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9185779907428951843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9350354fc0a0a48ffb6ed7f678f2cc50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelCount: {fileID: 0}
+  levelManager: {fileID: 9185779907428951850}
+  scoreManager: {fileID: 0}
+  nextlevelbutton: {fileID: 0}
+  Restartevelbutton: {fileID: 0}
+  RestartCanvas: {fileID: 0}
+  NextLevelCanvas: {fileID: 0}
+  coinCount: {fileID: 0}
+  player: {fileID: 0}
+--- !u!114 &9185779907428951846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9185779907428951843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab162ae2923cd4cbb8a79884cb867107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameScore: 0
+  StackText: {fileID: 0}
+  player: {fileID: 0}
+  StackScore: 0
+--- !u!114 &9185779907428951847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9185779907428951843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dfb813f8fb4043568fb92d59c06014c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cycleStands: []
+  skateStands: []
+  motorStands: []
+  player: {fileID: 0}
+  score: {fileID: 9185779907428951846}
+  playerMovement: {fileID: 0}
+  vehicle: {fileID: 0}
